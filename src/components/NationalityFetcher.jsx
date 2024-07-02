@@ -79,8 +79,8 @@ function NationalityFetcher({inputRef, name, setName}) {
   return (
     <div className="container-fluid d-flex justify-content-center align-items-center vh-100 bg-danger">
       <div className="card p-4 shadow-lg text-center">
-        <h1>Guess your Nationality</h1>
-        <h3>by entering you name:</h3>
+        <h1>Predict your Nationality</h1>
+        <h3>by entering your name:</h3>
         <Form onSubmit={handleSubmit}>
           <InputGroup className="mb-3"></InputGroup>
           <Form.Control
