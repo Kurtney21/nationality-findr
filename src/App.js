@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import NationalityFetcher from "./components/NationalityFetcher";
+import { useState, useRef } from "react";
 
+/**
+ * App component for fetching and displaying nationality based on name input.
+ */
 function App() {
+  // State for name input and focus management
+  const [name, setName] = useState("");
+  const inputRef = useRef();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NationalityFetcher name={name} setName={setName} inputRef={inputRef} />
     </div>
   );
 }
